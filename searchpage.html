@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body{
+    background-color: rgb(242, 242, 242);
+   }
+   *{
+    box-sizing: border-box;
+   }
+   .additional {
+    text-align: center;
+    color : rgb(113, 113, 113);
+    background-color: transparent;
+}
+
+.additional p {
+    font-size: 15px;
+}
+   #container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    margin-left: 190px;
+    margin-right: 190px;
+    margin-bottom: 70px;
+    
+   }
+   #container-items{
+    display: flex;
+    flex-direction: column;
+     background-color: white;
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   }
+   #title{
+    color: rgb(113, 113, 113);
+   }
+   #price{
+    
+     color: black;
+     text-decoration: solid;
+     font-weight: 700;
+   }
+   #cartbtn{
+background-color: rgb(119, 0, 255);
+color: white;
+   }
+   #container-items img{
+    width: 220px;
+    height: 220px;
+    
+   } 
+   #container-items img:hover{
+   transform: scale(1.1);
+   }
+   #butoon{
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+   }
+   #description{
+    padding : 5px;
+   }
+   #recommendation-list{
+    padding: 12px 0 0;
+    overflow: hidden;
+    margin-left: 190px;
+
+   }
+   #recommendation-list h2{
+    color: #333;
+    margin: 12px 0;
+    font-size: 24px;
+    padding: 0;
+    font-weight: 700;
+   }
+   #sort-filter-div{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-right: 140px;
+}
+#sort-filter-div select{
+    margin-left: 10px;
+}
+#btn-search{
+    cursor: pointer;
+   }
+    </style>
+      <script src="https://kit.fontawesome.com/8b305340ae.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="./Styles/navbar.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div id="navbar">
+        <div id="nav-a" style="cursor: pointer;" onclick = "window.location.href = './index.html'">
+            <img src="https://bit.ly/3nBvG0c" alt="" id="img" width="">
+        </div>
+        <div id="nav-b">
+            
+            <div>
+                <input type="search" id="search" placeholder="What are you looking for..">
+            </div>
+            <div>
+                <button id="btn-search">Search</button>
+            </div>
+        </div>
+        <div id="nav-c" onmouseover="windOpen()" onmouseout="windClose()">
+            <p><i class="fa-solid fa-user fa-2x"></i></p>
+            <div id="navbar-signin-logo">
+                <p>Sign in <br> Join for free</p>
+            </div>
+            <div class="flag" id="wind">
+                <p>Welcome back!</p>
+                <button 
+                >Sign In</button>
+                <button >Join for Free</button>
+                <br>
+                <div class="Openedslide">
+                    <div></div>
+                    <div>Continue with:</div>
+                    <div></div>
+                </div>
+                <br>
+                <div class="facebook-icon">
+                    <i class="fab fa-facebook-square fa-2x"></i>&nbsp;
+                <i class="fab fa-google fa-2x"></i>&nbsp;
+                <i class="fab fa-linkedin fa-2x"></i>&nbsp;
+                <i class="fab fa-twitter fa-2x"></i>&nbsp;<br>
+                </div>
+                <h6>By Sliding to Continue with or Create My account , <br> I agree to<a href="index.html">alibaba.com Policy</a> </h6>
+                <h2 style="color: black;">My Alibaba</h2>
+                </div>
+        </div>
+        <div id="nav-d">
+            <i class="fa-solid fa-comment-dots fa-2x"></i>
+            <p>message</p>
+        </div>
+        <div id="nav-e">
+            <i class="fa-solid fa-sack-dollar fa-2x"></i>
+            <p>orders</p>
+        </div>
+        <div id="nav-f" style="cursor:pointer" onclick = "window.location.href = './cart.html'">
+        <p id="cartCount">x</p>
+        <i class="fas fa-shopping-cart fa-2x"></i>
+            <p>cart</p>
+        </div>
+    </div>
+    <div id="bot-nav">
+        <div>
+            <div id="left_first"><i class="fa-solid fa-list"></i>
+                Categories    <i class="fa-solid fa-angle-up"></i>
+                <!-- </div> -->
+                <div id="menu">
+                  
+                        <div><a href="#">Machinery / Vehicles & Accessories </a>
+                           
+                        </div>
+                        <div><a href="./electronics.html">Consumer Electronics / Home Appliances </a>
+                           
+                        </div>
+                        <div><a href="#">Apparel / Fashion Accessories /Timepieces,Jewelry</a>
+                           
+                        </div>
+                        <div><a href="#">Lights & Lighting / Construction & Real Estate</a>
+                           
+                        </div>
+                        <div><a href="#">Home & Garden / Furniture</a>
+                           
+                        </div>
+                        <div><a href="#">Fabric & Textiles Raw Material / Home Textiles</a>
+                           
+                        </div>
+                        <div><a href="#">Beauty & Personal Care / Health & Medical</a>
+                            
+                        </div>
+                        <div><a href="#">Packaging & Printing / Office & School Supplies</a>
+                           
+                        </div>
+                        <div><a href="#">Electrical Equipment & Supplies</a>
+                          
+                        </div>
+                        <div><a href="#">Tools & Hardware / Security & Protection / Fabrication Service</a>
+                           
+                        </div>
+                </div>
+            </div>
+            <div>
+                Ready to Ship
+            </div>
+            <div>
+               Protective Essentials
+            </div>
+            <div>
+                Trade Shows
+            </div>
+            <div id="blogslide">
+                Buy Central <i class="fa-solid fa-angle-up"></i>
+               
+            </div>
+            <div>
+                Sell on Alibaba <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <div>
+                Help <i class="fa-solid fa-angle-up"></i>
+            </div>
+        </div>
+        <div>
+            <div>
+                English INR <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <div>
+                Ship to: <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png" width="22px" height="15px"><i class="fa-solid fa-angle-up"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar done -->
+
+    <!-- reccomend -->
+    <div id="recommendation-list">
+        <h2>
+           Related Search Results
+        </h2>
+    </div>
+    <div id="sort-filter-div">
+       
+        <select id="sort" onchange="sortfunc()">
+            <option value="">Sort by Price</option>
+            <option value="lth">Low to High</option>
+            <option value="htl">High to Low</option>
+        </select>
+    </div>
+    <div id="container">
+       <!-- All products will be appended here -->
+    </div>
+    <!-- footer started -->
+    <hr>
+    <div class="additional">
+        <p> Alibaba.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt - Indonesian - עברית</p>
+        <p>
+            Alibaba Group | Taobao Marketplace | Tmall.com | Juhuasuan | AliExpress | Alibaba.com | 1688.com | Alimama | Fliggy | Tmall Taobao World <br>
+                 Alibaba Cloud | AliOS | AliTelecom | Autonavi | UCWeb | Umeng | Xiami | DingTalk | Alipay | Lazada | Alibaba Security
+        </p>
+        <p>Browse Alphabetically: Onetouch | Showroom | Country Search | Suppliers | Affiliate</p>
+        <p>Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use - User Information Legal Enquiry Guide</p>
+        <p><span>© 1999-2022 Alibaba.com. </span>All rights reserved</p>
+    </div>
+   <!-- footer done -->
+</body>
+</html>
+<script>
+    document.getElementById("btn-search").addEventListener("click",searchfunc);
+    function searchfunc(){
+        var input = document.getElementById("search").value;
+        localStorage.setItem("search",input);
+        window.location.href= "searchpage.html";
+    }
+    var input = localStorage.getItem("search");
+     fetch(`https://mock-server-app-rt3e.onrender.com/products?tag_like=${input}`).then(res=>{
+        return res.json();
+    }).then(response =>{
+        console.log(response);
+        wholedata = response;
+        display(response);
+    })
+    function display(data){
+        document.getElementById("container").innerHTML="";
+        data.map(function(ele){
+            let containeritems = document.createElement("div");
+            containeritems.setAttribute("id","container-items");
+            let image = document.createElement("img");
+            image.src = ele.image ;
+            let description = document.createElement("div");
+            description.setAttribute("id","description");
+            let title = document.createElement("p");
+            title.setAttribute("id","title");
+            title.innerText= ele.title ;
+            let price = document.createElement("p");
+            price.setAttribute("id","price");
+            price.innerText= "₹" +ele.price ;
+            let butoon = document.createElement("div");
+            butoon.setAttribute("id","butoon");
+            let cartbtn = document.createElement("button");
+            cartbtn.setAttribute("id","cartbtn");
+            cartbtn.innerHTML = '<i class="fa-solid fa-cart-shopping">Add to cart</i>';
+            butoon.append(cartbtn);
+            description.append(title,price,butoon);
+            containeritems.append(image,description);
+            containeritems.addEventListener("click",function(){
+                localStorage.setItem("individual",ele.id);
+                window.location.href = "./individual-product.html";
+            })
+            containeritems.style.cursor="pointer";
+            document.getElementById("container").append(containeritems);
+        })
+    }
+    var arr;
+    function filterfunc(){
+        var category = document.getElementById("filter").value ;
+        fetch(`https://mock-server-app-rt3e.onrender.com/products?tag_like=${category}`).then(res=>{
+            return res.json();
+        }).then(response=>{
+            console.log(response);
+            arr = response;
+            localStorage.setItem("filtercategory", JSON.stringify(arr));
+            display(arr);
+        })
+    }
+    function sortfunc(){
+        var val = document.getElementById("sort").value ;
+        if(arr){
+            if(val==='lth')
+          {let newarr = JSON.parse(localStorage.getItem("filtercategory"));
+            newarr.sort(function(a,b){
+                return parseFloat(a.price) - parseFloat( b.price);
+            })
+            display(newarr);}  
+            else if(val==='htl'){
+                let newarr = JSON.parse(localStorage.getItem("filtercategory"));
+            newarr.sort(function(a,b){
+                return parseFloat(b.price) - parseFloat( a.price);
+            })
+            display(newarr);
+            }
+        }
+        else{
+            if(val==='lth')
+          {
+            wholedata.sort(function(a,b){
+                return parseFloat(a.price) - parseFloat( b.price);
+            })
+            display(wholedata);}  
+            else if(val==='htl'){
+                
+            wholedata.sort(function(a,b){
+                return parseFloat(b.price) - parseFloat( a.price);
+            })
+            display(wholedata);
+            }
+        }
+    }
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment successfull</title>
+    <style>
+        img{
+            width: 80px
+        }
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 350px;
+            margin: auto;
+            font-size: 20px;
+           margin-top: 10%;
+          
+          
+            
+        }
+        #tp{
+            width: 100%;
+            padding: 2px;
+            box-shadow: rgba(245, 247, 248, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+           
+        }
+        a{
+            text-decoration: none;
+            color: rgb(109, 106, 106);
+            font-size: 14px;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div id="container">
+        
+        <div id="tp">
+            <div id="loader"></div>
+        </div>
+    </div>
+   
+</body>
+</html>
+<script>
+    
+   function lodingwheel(callback){
+    
+    setTimeout(function(){
+        
+
+        let load_img=  document.createElement("div");
+        load_img.innerHTML =`<img src="https://media1.tenor.com/images/d6cd5151c04765d1992edfde14483068/tenor.gif?itemid=5662595">`
+        
+        let mag= document.createElement("p")
+        mag.innerText ="Don't Refresh the Page"
+        document.getElementById("loader").append(load_img,mag);
+        callback();
+    },200)
+   }
+
+  
+   let displayconfirmation =()=>{
+    setTimeout(function(){
+       let img_cnt = document.getElementById("tp");
+       let image = document.createElement("img")
+       image.src = `https://bit.ly/3VLyRBa`
+       let p1 = document.createElement("h2")
+       p1.innerText = "Thank You!"
+       let p2 = document.createElement("h4")
+       p2.innerText = "Payment successfull"
+       let anchor = document.createElement("a");
+       anchor.href ="./index.html";
+       anchor.innerText ="go to home"
+       img_cnt.append(image, p1, p2,anchor);
+       document.getElementById("container").append(img_cnt);
+      document.getElementById("loader").innerHTML  =null
+     
+    },3000)
+   }
+   lodingwheel(displayconfirmation)
+   function order(){
+    setTimeout(function(){
+        window.alert("Order Successfully Placed")
+    }, 5000)
+   }
+   order();
+</script>

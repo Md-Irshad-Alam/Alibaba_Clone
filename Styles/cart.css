@@ -1,0 +1,29 @@
+#navbar{
+    display:  flex;
+    justify-content: center;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#quantity-controller{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  #plus{
+    background-color: white;
+    cursor: pointer;
+    font-size: large;
+    margin-left: 5px;
+  }
+  #minus{
+    background-color: white;
+    cursor: pointer;
+    font-size: large;
+    margin-right: 5px;
+  }
+  #nos{
+    width: 20px;
+  }
+  #quantityNos{
+    text-align: center;
+  }

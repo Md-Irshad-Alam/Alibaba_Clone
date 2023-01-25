@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./cart.css">
+    <script src="https://kit.fontawesome.com/8b305340ae.js" crossorigin="anonymous"></script>
+</head>
+<style>
+
+#header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    /* border: 1px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#header * {
+    font-family: Roboto;
+}
+
+#header>div {
+    width: 16%;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#header img {
+    width: 100%;
+
+}
+
+#header p {
+    font-size: 22px;
+    font-weight: 400;
+}
+    
+    #container{
+      display: grid;
+    }
+    #container-items{
+        display: flex ;
+        flex-direction: column;
+        width: 828px;
+        height: 119px;
+        margin-left: 30px;
+        margin-top: 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    padding: 0 20px;
+    }
+    #image-title{
+        display: flex;
+    }
+    #price-qty{
+        display: flex;
+        justify-content: space-around;
+        margin-right: 80px;
+    }
+    #image-title img{
+   width: 70px;
+   height: 70px;
+    }
+    #btn-container{
+        width: 125px;
+        margin-left: 80px;
+    }
+    #quantity-controller{
+        display: flex;
+        gap: 10px;
+    }
+   #quantitynos{
+    border: 2px solid rgb(233, 227, 227);
+    
+   }
+    #btn-container div:nth-child(1){
+    width: 100%;
+    border-style: solid;
+    background: #f60;
+    border-color: #f60;
+    border-radius: 100px;
+    
+    height: 28px;
+    font-size: 14px;
+    border-width: 1px;
+    cursor: pointer;
+  }
+  #btn-container div:nth-child(1) button{
+    background: #f60;
+    border-radius: 100px;
+    padding: 0 24px;
+    height: 28px;
+    font-size: 14px;
+   border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+  }
+  #whole-some{
+    display: flex;
+  }
+  #subtotal-container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    padding: 0 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 285px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 8px;
+    line-height: 13px;
+  }
+  #item-total{
+    display: flex;
+    justify-content: space-between;
+  }
+  #coupon-section{
+    display: flex;
+    justify-content: space-between;
+  }
+  #coupon-section div:nth-child(2){
+    margin-top: 17px;
+    margin-left: 5px;
+  }
+  #coupon-section div:nth-child(3){
+    margin-top: 17px;
+  }
+  #cart-total{
+    display: flex;
+    justify-content: space-between;
+  }
+  #cross{
+    margin-left: 60px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  #text-title p{
+ font-weight: 800;
+  }
+</style>
+<body>
+    
+        <div id="header">
+            <div>
+                <a href="./index.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"
+                        alt=""></a>
+            </div>
+            <p>
+                Shopping Cart
+            </p>
+        </div>
+    <div id="whole-some">
+        <div id="container">
+            <div id="container-items">
+           <div id="image-title">
+            <img src="https://s.alicdn.com/@sc04/kf/H206a8f5cadda42a0b4f7a1dd80328648K.jpg_300x300.jpg" alt="">
+            <p>PHONE 13 PRO for Smartphone 5g 6GB+256gb mobile phone Global version smart phone</p>
+            <div id="cross"><i class="fa-solid fa-xmark fa-1.5x"></i></div>
+           </div>
+    
+           <div id="price-qty">
+            <div><p>₹<span id="amnt">3000</span>/Piece</p></div>
+            <div id="quantity-controller">
+                <div><button id="minus" onclick="minusfunc()">-</button></div>
+                <div id="Nos"><span id="quantitynos">1</span></div>
+                <div><button id="plus" onclick="plusfunc()">+</button></div>
+            </div>
+            <div id="total-price">
+                <p>INR ₹<span>3000</span></p>
+            </div>
+           </div>
+            </div>
+    
+        </div>
+        <div id="subtotal-container">
+            <div id="text-title"><p>Cart Subtotal</p></div>
+            <div id="item-total">
+                <div><p>Item(s) total</p></div>
+                <div><p>INR ₹<span id="itemstotal" >3000</span></p></div>
+            </div>
+            <div id="coupon-section">
+                <div><p>Apply coupon</p></div>
+                <div><input id="coupon" type="text" placeholder="Enter your coupon code"></div>
+                <div><button onclick="couponfunc()">Apply</button></div>
+            </div>
+            <div id="cart-total">
+                <div><p>Cart Total</p></div>
+                <div><h3>INR ₹<span id="carttotal">3000</span></h3></div>
+            </div>
+           
+            <div id="disclaimer">
+                <p>(Excluding shipping fee and tax)</p>
+            </div>
+            <div id="btn-container">
+                    <div onclick="window.location.href=`./cart&pymt/address.html`"><button>Place Order</button></div>
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+
+<script>
+
+
+function display(){
+    let arr = JSON.parse(localStorage.getItem("cart-contents"));
+let qtyarr = JSON.parse(localStorage.getItem("qtyarr"));
+    document.getElementById("container").innerText="";
+   
+    arr.map(function(ele,idx){
+
+        let containeritems = document.createElement("div");
+    containeritems.setAttribute("id","container-items");
+    
+    let imagetitle = document.createElement("div");
+    imagetitle.setAttribute("id","image-title");
+    let image = document.createElement("img");
+    image.src = ele.image;
+    let imgp = document.createElement("p");
+    imgp.innerText= ele.title;
+    let cross = document.createElement("div");
+    cross.setAttribute("id","cross");
+    cross.innerHTML= `<i class="fa-solid fa-xmark fa-1.5x"></i>` ;
+    cross.onclick = ()=>{
+        removefunc(idx);
+    }
+    imagetitle.append(image,imgp,cross);
+    let priceqty = document.createElement("div");
+    priceqty.setAttribute("id","price-qty");
+    let divok = document.createElement("div");
+    divok.innerHTML=`<p>₹<span id="amnt" >${ele.price}</span>/Piece</p>` ;
+    priceqty.append(divok);
+    let quantitycontrol = document.createElement("div");
+    quantitycontrol.setAttribute("id","quantity-controller");
+    let divminus = document.createElement("div");
+    let minusbtn = document.createElement("button");
+    minusbtn.setAttribute("id","minus");
+    minusbtn.innerText="-";
+    minusbtn.onclick = ()=>{
+        minusfunc(idx);
+
+    }
+    divminus.append(minusbtn);
+    let divyo = document.createElement("div");
+    divyo.setAttribute("id","nos");
+    divyo.innerHTML=`<span id="quantitynos" >${qtyarr[idx].qty}</span>`;
+    let divplus = document.createElement("div");
+    let plusbtn = document.createElement("button");
+    plusbtn.innerText="+";
+    plusbtn.setAttribute("id","plus");
+    plusbtn.onclick = ()=>{
+       
+        plusfunc(idx);
+    }
+    divplus.append(plusbtn);
+  quantitycontrol.append(divminus,divyo,divplus);
+  
+  let totalmaaal = document.createElement("div");
+  totalmaaal.setAttribute("id","total-price");
+  let totalpricex = Number(ele.price)*Number(qtyarr[idx].qty) ;
+  totalmaaal.innerHTML=` <p>INR ₹<span id="total-anna" >${totalpricex}</span></p>`;
+  priceqty.append(quantitycontrol,totalmaaal);
+ containeritems.append(imagetitle,priceqty);
+    document.getElementById("container").append(containeritems);
+  
+    })
+    
+}
+display();
+function total(){
+    let currtotal = localStorage.getItem("total-price");
+    document.getElementById("carttotal").innerText= currtotal;
+    document.getElementById("itemstotal").innerText=currtotal;
+}
+total();
+
+function plusfunc(idx){
+    let qtyarr = JSON.parse(localStorage.getItem("qtyarr"));
+    qtyarr[idx].qty++;
+    localStorage.setItem("qtyarr",JSON.stringify(qtyarr));
+    display();
+    let arr = JSON.parse(localStorage.getItem("cart-contents"));
+    let currtotal =Number(localStorage.getItem("total-price")) ;
+    currtotal += Number(arr[idx].price)
+     localStorage.setItem("total-price",currtotal);
+     total();
+    
+}
+function minusfunc(idx){
+    
+    let qtyarr = JSON.parse(localStorage.getItem("qtyarr"));
+    if(qtyarr[idx].qty>1){
+        qtyarr[idx].qty--;
+    localStorage.setItem("qtyarr",JSON.stringify(qtyarr));
+    display();
+    let arr = JSON.parse(localStorage.getItem("cart-contents"));
+    let currtotal =Number(localStorage.getItem("total-price")) ;
+    currtotal -= Number(arr[idx].price)
+     localStorage.setItem("total-price",currtotal);
+     total();
+    }
+    
+}
+
+function couponfunc(){
+    let input = document.getElementById("coupon").value ;
+    if(input==='masai30'){
+        let currtotal =Number(localStorage.getItem("total-price")) ;
+        currtotal = currtotal - (currtotal*30)/100 ;
+        alert("Congrats! 30% discount applied!");
+        document.getElementById("carttotal").innerText= currtotal;
+        
+
+    }
+    else{
+        alert("invalid coupon code!");
+    }
+}
+function removefunc(idx){
+    let qtyarr = JSON.parse(localStorage.getItem("qtyarr"));
+    let arr = JSON.parse(localStorage.getItem("cart-contents"));
+    let price = qtyarr[idx].qty * arr[idx].price ;
+    arr.splice(idx,1);
+    localStorage.setItem("cart-contents",JSON.stringify(arr));
+    qtyarr.splice(idx,1);
+    localStorage.setItem("qtyarr",JSON.stringify(qtyarr));
+    let currtotal =Number(localStorage.getItem("total-price")) ;
+  currtotal -= Number(price);
+  localStorage.setItem("total-price",currtotal);
+    display();
+    total();
+}
+</script>
+</html>

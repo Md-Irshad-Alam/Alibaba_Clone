@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alibaba</title>
+    <link rel="stylesheet" href="./Styles/homepage.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <script src="https://kit.fontawesome.com/8b305340ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Styles/navbar.css">
+</head>
+<body>
+    <!-- Navbar started -->
+    <div id="navbar">
+        <div id="nav-a" style="cursor: pointer;" onclick = "window.location.href = './index.html'">
+            <img src="https://bit.ly/3nBvG0c" alt="" id="img" width="">
+        </div>
+        <div id="nav-b">
+            
+            <div>
+                <input type="search" id="search" placeholder="What are you looking for..">
+            </div>
+            <div>
+                <button id="btn-search">Search</button>
+            </div>
+        </div>
+        <div id="nav-c" onmouseover="windOpen()" onmouseout="windClose()">
+            <p><i class="fa-solid fa-user fa-2x"></i></p>
+            <div id="navbar-signin-logo" style="cursor: pointer;" onclick = "window.location.href = './signup.html'">
+                <p>Sign in <br> Join for free</p>
+            </div>
+            <div class="flag" id="wind">
+                <p>Welcome back!</p>
+                <button 
+                >Sign In</button>
+                <button >Join for Free</button>
+                <br>
+                <div class="Openedslide">
+                    <div></div>
+                    <div>Continue with:</div>
+                    <div></div>
+                </div>
+                <br>
+                <div class="facebook-icon">
+                    <i class="fab fa-facebook-square fa-2x"></i>&nbsp;
+                <i class="fab fa-google fa-2x"></i>&nbsp;
+                <i class="fab fa-linkedin fa-2x"></i>&nbsp;
+                <i class="fab fa-twitter fa-2x"></i>&nbsp;<br>
+                </div>
+                <h6>By Sliding to Continue with or Create My account , <br> I agree to<a href="index.html">alibaba.com Policy</a> </h6>
+                <h2 style="color: black;">My Alibaba</h2>
+                </div>
+        </div>
+        <div id="nav-d">
+            <i class="fa-solid fa-comment-dots fa-2x"></i>
+            <p>message</p>
+        </div>
+        <div id="nav-e">
+            <i class="fa-solid fa-sack-dollar fa-2x"></i>
+            <p>orders</p>
+        </div>
+        <div id="nav-f" style="cursor:pointer" onclick = "window.location.href = './cart.html'">
+        <p id="cartCount">x</p>
+        <i class="fas fa-shopping-cart fa-2x"></i>
+            <p>cart</p>
+        </div>
+    </div>
+    <div id="bot-nav">
+        <div>
+            <div id="left_first"><i class="fa-solid fa-list"></i>
+                Categories    <i class="fa-solid fa-angle-up"></i>
+                <!-- </div> -->
+                <div id="menu">
+                  
+                        <div><a href="#">Machinery / Vehicles & Accessories </a>
+                           
+                        </div>
+                        <div s><a href="./product.html">Consumer Electronics / Home Appliances </a>
+                           
+                        </div>
+                        <div><a href="#">Apparel / Fashion Accessories /Timepieces,Jewelry</a>
+                           
+                        </div>
+                        <div><a href="#">Lights & Lighting / Construction & Real Estate</a>
+                           
+                        </div>
+                        <div><a href="#">Home & Garden / Furniture</a>
+                           
+                        </div>
+                        <div><a href="#">Fabric & Textiles Raw Material / Home Textiles</a>
+                           
+                        </div>
+                        <div><a href="#">Beauty & Personal Care / Health & Medical</a>
+                            
+                        </div>
+                        <div><a href="#">Packaging & Printing / Office & School Supplies</a>
+                           
+                        </div>
+                        <div><a href="#">Electrical Equipment & Supplies</a>
+                          
+                        </div>
+                        <div><a href="#">Tools & Hardware / Security & Protection / Fabrication Service</a>
+                           
+                        </div>
+                </div>
+            </div>
+            <div>
+                Ready to Ship
+            </div>
+            <div>
+               Protective Essentials
+            </div>
+            <div>
+                Trade Shows
+            </div>
+            <div id="blogslide">
+                Buy Central <i class="fa-solid fa-angle-up"></i>
+               
+            </div>
+            <div>
+                Sell on Alibaba <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <div>
+                Help <i class="fa-solid fa-angle-up"></i>
+            </div>
+        </div>
+        <div>
+            <div>
+                English INR <i class="fa-solid fa-angle-up"></i>
+            </div>
+            <div>
+                Ship to: <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png" width="22px" height="15px"><i class="fa-solid fa-angle-up"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar done -->
+     <!-- Design layout started -->
+     <div id="design-container">
+        <div id="sub-categories">
+           <div id="title-categories">
+            <p>My Markets</p>
+           
+           </div>
+           <div id="sub-category-texts" style="cursor: pointer;" onclick = "window.location.href = './product.html'" >
+            <img src="https://sc02.alicdn.com/kf/HTB12RuNUmzqK1RjSZFH7623CpXa6.png_50x50xz.jpg" alt="">
+                <p>Consumer Electronics</p>
+            
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://sc02.alicdn.com/kf/HTB1gUuPUkzoK1RjSZFl761i4VXaw.png_50x50xz.jpg" alt="">
+            <p style="margin-right: 100px;">Apparel</p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://sc02.alicdn.com/kf/HTB1JdWLUhTpK1RjSZR0762EwXXa6.png_50x50xz.jpg" alt="">
+            <p style="margin-right:70px">Vehicle Parts </p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://sc02.alicdn.com/kf/HTB1AkuTUgHqK1RjSZJn762NLpXa2.png_50x50xz.jpg" alt="">
+            <p style="margin-left:5px;">Sports & Entertainment</p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://sc02.alicdn.com/kf/H5e92ef24edc94162b72c331cbd6fbe6fn.png_50x50xz.jpg" alt="">
+            <p style="margin-right: 30px;">Industrial Machinery</p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://sc02.alicdn.com/kf/HTB1RxCkXHys3KVjSZFn760FzpXaP.png_50x50xz.jpg" alt="">
+            <p style="margin-right: 50px ;">Home & Garden</p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://sc02.alicdn.com/kf/HTB1K6G0UcfpK1RjSZFO7616nFXah.png_50x50xz.jpg" alt="">
+            <p style="margin-right: 100px">Beauty</p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+           <div id="sub-category-texts">
+            <img src="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg" alt="">
+            <p style="margin-right: 65px;">All Categories</p>
+            <i class="fa-solid fa-angle-right"></i>
+           </div>
+        </div>
+        <!-- slider -->
+   
+
+       
+        <div id="slider-container">
+            <div class="slider">
+                <div class="imgs">
+                  <!-- you can add divs with class img here and they will be 
+                       automatically added to slider -->
+                  <!-- style="left: 0;" in case JS is disabled -->
+                  
+                  <div class="img" style="left: 0;"> 
+                    
+                  </div>
+                  <div class="img">
+                    
+                  </div>
+                  <div class="img">
+                    
+                  </div>
+                  <div class="img">
+                   
+                  </div>
+                  <div class="img"></div>
+                 
+                
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+
+        <div id="other-text-container">
+            <div id="upper-text"><p>Sign up to enjoy exciting Buyers Club benefits</p></div>
+            <div id="join-for-free">
+                <p>Join For Free</p>
+            </div>
+            <div id="sign-up-random">
+                <p>Sign In</p>
+            </div>
+            
+            <div id="Buyers-club">
+                <p>Buyers Club  <i class="fa-solid fa-arrow-right "></i></p>
+            </div>
+        </div>
+    </div>
+        <!-- slider done -->
+
+    <!-- PART 1 -->
+    <div id="hparent">
+        <div class="hchild">
+            <div>
+                <h3>New arrivals</h3>
+            </div>
+            <div class="hchild_2">
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H789acdd3e9ef4d6391922c66680a87bam.png_120x120.jpg" alt="">
+                    <h5>$0.19</h5>
+                    <p>Trending Now</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/Hbf885fd9f0a34e62839d627816f5aa38N.jpg_120x120.jpg" alt="">
+                    <h5>$3.00</h5>
+                    <p>Trending Now</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H836498e16baa4f42beb531984d7218e0K.jpg_120x120.jpg" alt="">
+                    <h5>$0.65</h5>
+                    <p>Trending Now</p>
+                </div>
+            </div>
+        </div>
+        <div class="hchild">
+            <div>
+                <h3> Top-ranking</h3>
+            </div>
+            <div class="hchild_2">
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H141959fbc44a453fb5f6b0c800c50e80H.jpg_120x120xz.jpg" alt="">
+                    <h5>$0.01</h5>
+                    <p>100.0 pieces</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H7e21ed828b6e44b98fea3bc170a35507i.jpg_120x120xz.jpg" alt="">
+                    <h5>$1.34</h5>
+                    <p>25 pieces</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H71e8a8c52b3441a491ac917c0edb643bU.png_120x120xz.jpg" alt="">
+                    <h5>$0.70</h5>
+                    <p>10.0 pairs</p>
+                </div>
+            </div>
+        </div>
+        <div class="hchild">
+            <div>
+                <h3>Personal Protective Equipment</h3>
+            </div>
+            <div class="hchild_2">
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H8ab7c0b7c78747bc827ceb4b780eb2d9O.jpg_120x120xz.jpg" alt="">
+                    <h5>$6.80</h5>
+                    <!-- <p>Trending Now</p> -->
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/Hc7def3108b894ac0ba1474905d3ff832g.jpg_120x120xz.jpg" alt="">
+                    <h5>$9.62</h5>
+                    <!-- <p>Trending Now</p> -->
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/Haf7cc6e5b1834924a55ab9212d8fb2eaB.jpg_120x120xz.jpg" alt="">
+                    <h5>$18.90</h5>
+                    <!-- <p>Trending Now</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="hchild">
+            <div>
+                <h3>Dropshipping</h3>
+            </div>
+            <div class="hchild_2">
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H3acee5278d3546288e2da8e9b803239eB.jpg_120x120xz.jpg" alt="">
+                    <h5>$3.60</h5>
+                    <p>1 piece</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H3f74649a2f9d4e3284e2ac0f63108860R.jpg_120x120xz.jpg" alt="">
+                    <h5>$7.19</h5>
+                    <p>1 piece</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H2626cd492aa5406a851229879f2673d4x.jpg_120x120xz.jpg" alt="">
+                    <h5>$9.00</h5>
+                    <p>10 pieces</p>
+                </div>
+            </div>
+        </div>
+        <div class="hchild">
+            <div>
+                <h3>Regional specialties</h3>
+            </div>
+            <div class="hchild_2">
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H48e72e66fb264d92b925cec03ac634dfD.jpg_120x120xz.jpg" alt="">
+                    <h5>$0.01</h5>
+                    <p>1.0 piece</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/Hcad06b96e6fc4616a9ea3c7353b81165i.jpg_120x120xz.jpg" alt="">
+                    <h5>$0.30</h5>
+                    <p>100.0 pieces</p>
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H3200958666794dbd8f8cb1ab4afc9c78x.jpg_120x120xz.jpg" alt="">
+                    <h5>$2.10</h5>
+                    <p>60 watts</p>
+                </div>
+            </div>
+        </div>
+        <div class="hchild">
+            <div>
+                <h3>Tips</h3>
+            </div>
+            <div class="hchild_2">
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/Hc87e1feecf334b08b8ad27da53d918efv.jpg_120x120xz.jpg" alt="">
+                    <h5>$0.01</h5>
+                    <!-- <p>Trending Now</p> -->
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H241d525b2244428887e5c7ca871cd9999.jpg_120x120xz.jpg" alt="">
+                    <h5>$1.69</h5>
+                    <!-- <p>Trending Now</p> -->
+                </div>
+                <div>
+                    <img src="https://s.alicdn.com/@sc04/kf/H8ed89a29d74b40f3996f3ad1f3ec2eebM.jpg_120x120xz.jpg" alt="">
+                    <h5>$0.69</h5>
+                    <!-- <p>Trending Now</p> -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- PART 2 -->
+    <div id="hparent2">
+        <div class="hchild2_1">
+            <div>
+                <h3>Customizable products</h3>
+                <p>Provided by 60,000+ experienced manufacturers with <br> design and production capabilities and on-time...</p>
+            </div>
+            <div class="hchild2_2">
+                <div class="hchild2_2_1">
+                    <div>
+                        <h4 id=" amit">Source from factories</h4>
+                    </div>
+                    <div class="hchild2_2_1_1">
+                        <div>
+                            <img src="https://s.alicdn.com/@sc04/kf/Haf164bcb4fa54728a6b462d46c6eda3eu.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/H2258ec0cb8584b0782ccc77423800803U.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/H85da8d8cc0184b7db87ecaf1725af6c8V.jpg_100x100xz.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="hchild2_2_1">
+                    <div>
+                        <h4>Top-ranking suppliers</h4>
+                    </div>
+                    <div class="hchild2_2_1_1">
+                        <div >
+                            <img src="https://s.alicdn.com/@sc04/kf/H032517fce490403f8a948d2622474619r.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/Ha950d052818d4eb3a29a35adff118d02Q.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/H4477382ba9f643c19e7a8cd15ee7a424p.jpg_100x100xz.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="hchild2_1">
+            <div>
+                <h3>Ready-to-ship products</h3>
+                <p>Source from 15 million products that are ready to ship, <br> and leave the facility within 15 days.</p>
+            </div>
+            <div class="hchild2_2">
+                <div class="hchild2_2_1">
+                    <div>
+                        <h4>Exclusive discounts</h4>
+                    </div>
+                    <div class="hchild2_2_1_1">
+                        <div>
+                            <img src="https://s.alicdn.com/@sc04/kf/H91cfa1c8fc624aa29828bad59abf57f6s.jpg_100x100xz.jpg" alt="">
+                       
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/Hc71b699d7ec1444a93c23b5d1a7eaed1C.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/Hc439546d55e24dc7b15bdf490dfb5318I.jpg_100x100xz.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="hchild2_2_1">
+                    <div>
+                        <h4>Weekly deals</h4>
+                    </div>
+                    <div class="hchild2_2_1_1">
+                        <div>
+                            <img src="https://s.alicdn.com/@sc04/kf/H34d2824fbd3e464f9ef8928345bbbc91v.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/Hd262501224bf47478b69ba9c4c878ccen.jpg_100x100xz.jpg" alt="">
+                        <!-- </div> -->
+                        <!-- <div> -->
+                            <img src="https://s.alicdn.com/@sc04/kf/HTB1C23tbdzvK1RkSnfoq6zMwVXaC.jpg_100x100xz.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PART 3-->
+    
+   
+
+
+
+    <div id="hparent5">
+        <div>
+            <h2>Weekly deals</h2>
+        </div>
+        <div class="hchild5">
+            
+        </div>
+        <div>
+            <h2>LIVE</h2>
+        </div>
+        <div
+        class="hchild5_2">
+
+        </div>
+        <div class="hchild5_1">
+            <h2>Small commodities</h2>
+        </div>
+    </div>
+
+    <!-- PART 4 -->
+
+    <div id="hparent4">
+        <div id="hchild4_1">
+            <div>
+                <img src="https://s.alicdn.com/@sc04/kf/Hb007cf88beab40398ebf19beca7b0847A.jpg_220x220.jpg" alt="">
+                <p>$6.38</p>
+            </div>
+            <div>
+                <img src="https://s.alicdn.com/@sc04/kf/H8e9d906a0897437fbc3389b0ea092a527.png_220x220.png" alt="">
+                <p>$7.18</p>
+            </div>
+        </div>
+        <div id="hchild4_1">
+            <div>
+                <img src="https://s.alicdn.com/@sc04/kf/H16905815e85f4cc0ae4dca03d67a6f45g.jpg_220x220.jpg" alt="">
+                <p>$3.10</p>
+            </div>
+            <div>
+                <img src="https://s.alicdn.com/@sc04/kf/H643e80600ff6486b8cde805ad2c621b49.jpg_220x220.jpg" alt="">
+                <p>$0.29</p>
+            </div>
+        </div>
+        <div id="hchild4_1">
+            <div>
+                <img src="https://s.alicdn.com/@sc04/kf/Ha4eafbad967a4f40820798cd5360688fu.jpg_220x220.jpg" alt="">
+                <p>$5.18</p>
+            </div>
+            <div>
+                <img src="https://s.alicdn.com/@sc04/kf/HLB1O3w5SSzqK1RjSZPcq6zTepXap.jpg_220x220.jpg" alt="">
+                <p>$1.41</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PART 5 -->
+    
+    <div id="hparent3">
+        <div>
+            <h2>Request for Quotation</h2>
+        </div>
+        <div>
+            <p>Get customized quotes quickly</p>
+        </div>
+        <div id="hparent3_3">
+
+        </div>
+    </div>
+
+    <!-- PART 6 -->
+
+    <div class="rfq-content">
+        <a href="" class="rfq-banner">
+            <h3>Global Sourcing Marketplace</h3>
+            <div class="banner-number">
+                <div>
+                    <span>2128000 +</span>
+                    <span>RFQs</span>
+                </div>
+                <div>
+                    <span>
+                        22h </span>
+                            <span>Avg Quotation Duration</span>
+                </div>
+                <div>
+                    <span>176000 +</span>
+                    <span>Active Suppliers</span>
+                </div>
+                <div>
+                    <span>6081 </span>
+                    <span>Industries</span>
+                </div>
+            </div>
+
+            <span class="banner-link">Learn More</span>
+        </a>
+
+        <div class="rfq-form">
+            <h3>One Request, Multiple Quotes</h3>
+            <form>
+                <input id="input1" type="text" placeholder="What are you looking for…">
+                <div>
+                    <input type="number" placeholder="Quantity">
+                    <select name="" id="">
+                        <option value="">Piece/Pieces</option>
+                    </select>
+                </div>
+                <a>Request For Quotation</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- PART 7 -->
+
+
+
+    <div id="hparent7">
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/He6b9797cbf034db5ba860def5e541563G.jpg_250x250.jpg" alt="">
+            <p>20ft flat pack sandwich <br> panel container...</p> 
+            <h4>$1,099.00 - $1,399.00</h4>
+            <p>1 set (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/Hdf10813bbca74ca78183ef080145aa72O.jpg_250x250.jpg" alt="">
+            <p>Good Quality Washing <br> Machine Multi Elect...</p> 
+            <h4>$5.00 - $10.00</h4>
+            <p>1.0 set (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/Hf0fb8394ab0e40689df82a36994bdd59z.jpg_250x250.jpg" alt="">
+            <p>OEM animal Foldable <br> storage box wi...</p> 
+            <h4>$3.90 - $4.30</h4>
+            <p>2 pieces (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/H1a5b00000ae24334a0701f1f139475f3x.jpg_250x250.jpg" alt="">
+            <p>Stable supply high <br> quality bulk t-...</p> 
+            <h4>$3.50 - $5.00</h4>
+            <p>5.0 pieces (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/Hb79380a8f5d04638b5a48077d0909291A.jpg_250x250.jpg" alt="">
+            <p>Made In China Kenya <br> South Africa A...</p> 
+            <h4>$1,800.00 - $2,000.00</h4>
+            <p>1.0 set (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/H05af8758e6e84c03a6b361efe0db79a8G.jpg_250x250.jpg" alt="">
+            <p>Promotional Eco- <br> friendly Sports Bo...</p> 
+            <h4>$0.70 - $0.98</h4>
+            <p>60 pieces (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/H1dc9e3d9c75e4264add501f7c2f3a219Q.jpg_250x250.jpg" alt="">
+            <p>low cost prefabricated <br> house fast build L...</p> 
+            <h4>$220.00 - $290.00</h4>
+            <p>1.0 square meter (min.</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/Hb1d0618d00b54668aa7aa55bd86aff467.jpg_250x250.jpg" alt="">
+            <p>2022 new rectangle <br> plastic net laundry ...</p> 
+            <h4>$13.75 - $15.95</h4>
+            <p>1 piece (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/H3211436c0db744dc83f6d3c7b8ed6e47j.jpg_250x250.jpg" alt="">
+            <p>Love at first sight doll <br> scissors machine</p> 
+            <h4>$1,180.00 - $1,187.00</h4>
+            <p>1 piece (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/H5f9c47e3bbc846df8ebac2cd3ffd4d485.jpg_250x250.jpg" alt="">
+            <p>47cm X 244cm Arch <br> Metal Landscape Pa...</p> 
+            <h4>$0.50 - $10.00</h4>
+            <p>20.0 pieces (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img src="https://s.alicdn.com/@sc04/kf/H55b116c126024057b78dcecb80c07241X.jpg_250x250.jpg" alt="">
+            <p>New fashion Italy <br> dresses women yell...</p> 
+            <h4>$5.00 - $15.00</h4>
+            <p>100 pieces (min. order)</p>
+        </div>
+        <div id="hchild7">
+            
+            <img id="hchild7_12" src="https://s.alicdn.com/@sc04/kf/Ha9b395f93d8244f189f7ca91fcf548240.jpg_250x250.jpg" alt="">
+            <p>Kitchen Stackable <br> Cutlery Non-Slip Dur...</p> 
+            <h4>$2.00</h4>
+            <p>40 pieces (min. order)</p>
+        </div>
+        
+    </div>
+
+
+    <!-- PART 8 -->
+
+
+    <div id="hparent8">
+        <div id="hchild8_1">
+            <h2>Suppliers by country or region</h2>
+        </div>
+        <div id="hchild8">
+
+        </div>
+    </div>
+
+
+    <!-- PART 9 -->
+
+    <div id="hparent9">
+        <div id="hchild9_1">
+            <p>Japan</p>
+        </div>
+        <div id="hchild9_1">
+            <p>USA</p>
+        </div>
+        <div id="hchild9_1">
+            <p>Thailand</p>
+        </div>
+        <div id="hchild9_1">
+            <p>Italy</p>
+        </div>
+        <div id="hchild9_1">
+            <p>Turkey</p>
+        </div>
+        <div id="hchild9_1">
+            <p>Malaysia</p>
+        </div>
+        <div id="hchild9_1"> 
+            <p>South Korea</p>
+        </div>
+        <div id="hchild9_1">
+            <p>Vietnam</p>
+        </div>
+        <div id="hchild9_1">
+            <p>Russia</p>
+        </div>
+        <div id="hchild9">
+            <p>More</p>
+        </div>
+    </div>
+
+<footer>
+    <div class="footerCont">
+        <div class="trade-alert">
+            <p>Trade alert- Delivering the latest product trends and industry news straight to your inbox.</p>
+            <input type="text" placeholder=" Your Email">
+            <button>Submit</button>
+        </div>
+        <div class="about-alibaba">
+            <ul id="customer-service">
+                <h3>Costomer Service</h3>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Report Abuse</a></li>
+                <li><a href="#">Submit a Dispute</a></li>
+                <li><a href="#">Policy & Rules</a></li>
+                <li><a href="#">Get paid For Your Feedback</a></li>
+            </ul>
+            <ul id="About-us">
+                <h3>About Us</h3>
+                <li><a href="#">About alibaba.com</a></li>
+                <li><a href="#">About Group</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+            <ul id="Source-on">
+                <h3>Source on alibaba.com</h3>
+                <li><a href="#">Resources </a></li>
+                <li><a href="#">All Category</a></li>
+                <li><a href="#">Request for Quotation</a></li>
+                <li><a href="#">Ready to ship</a></li>
+                <li><a href="#">Buyer partners</a></li>
+                <li><a href="#">Alibaba.com Select</a></li>
+            </ul>
+            <ul id="sell-on">
+                <h3>Sell On alibaba.com</h3>
+                <li><a href="#">Supplier Membership</a></li>
+                <li><a href="#">Leraning centre</a></li>
+                <li><a href="#">Partner Program</a></li>
+                
+            </ul>
+            <ul id="trade-service">
+                <h3>Trade Service</h3>
+                <li><a href="#">Trade Assurance </a></li>
+                <li><a href="#">Business Opportunity</a></li>
+                <li><a href="#">Logistic service </a></li>
+                <li><a href="#">Production Monitering & <br>inspection Service</a></li>
+                <li><a href="#">Letter of Credit</a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <div class="social">
+        <div class="social-app">
+            <p>Download:</p>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRAp0le4Jjiy2OHgq6e8Kd-n297KLVreDnoPRZqMjJ-l4hZr4IvK4xW3u_zge4AQ-lfA&usqp=CAU" alt=""></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmzMy_vf2fVRO0QcYwkc5F_yDzu-UEYgoE-OxmZ3cSYucCDJOJVd44s-ufVL1I_aDC8g&usqp=CAU" alt=""></a>
+            
+            
+        </div>
+        <div class="supplier-app">
+            <p>Alibaba supplier:</p>
+            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn34n6JE7KryrFcEHqpaSUp0TxSdlpdEfMC9B01AYrWw&s" alt=""></a>
+            
+        </div>
+        <div class="social-media">
+            <p>Follow us:</p>
+            <ul id="social-media-list">
+                <li>
+                    <a href="#" target="_blank">
+                        <img class="image" src="data:image/png;base64,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" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img class="image" src="data:image/png;base64,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" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" >
+                        <img class="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAbFBMVEX/////AAD/xsb/+/v/YmL/Bgb/09P/gID/6ur/+Pj/39//hob/bm7/ExP/o6P/np7/kJD/8PD/u7v/ra3/LS3/eXn/R0f/WFj/Z2f/QED/tLT/Jib/2tr/wcH/zMz/p6f/mJj/NTX/Hh7/UFDz6kM1AAADIklEQVR4nO2bi26bMBSGMSRgwOUargkkpO//joUkU9Nt3WL8cxjT+aRIUaU0n6hrH5+LZTEMwzAMwzAMwzD/D47j+F8Zf7K21Bf8VAZu32Vtnp+jOL4kSeh5hVK7kerB+LZWqig8L0ySSxxH5zxvO7s/BdInVHV8Kd0s9uqyaYbD8Xh92wt99m/X42EYmqYqkraXMl3272FHRTnD8q+UKrKXcvbbZs6TfZF90y6yatxqOec7lYu3zpeWnmjR1jGFtRAR1jqjsRaiQ1rLI5X2QQK1ayprIRTOOqCzFgL3uENK7RBlnb5Tar+nIO0TpbUQJ5A22e53JwNpe7TaHkh7kaDve0qQ9oJx3+/YY6xTam3MVuLSWguBiV+JNxJUOEUUs34SQ7QTau0Eoq0TkezrN3NtTFRS6Gj3J/MrJ+S88Xc6X2lbVmcqXiOu8KmWxZTu8M9mK6VCaMtGV9uynNBEvEScN/Kgrz1+ymClDIgLTqB1tn/mxPrZl4srRFvrK59SeX471ztYU3sUn3nAIrT1rmQ/JU5Pai1tvQDwl3xvr7Xt30HcJg21Lacd1tDuDbVH8URzF0cE3Lax9riLK61dFKHdAbTHpaazxBHaepebb0swTvf6adsDtPUOjT9UjvzzlVAb9LQn3OG1X4K4TMK0nZefNiKdtsLaRtQoERug5k6CWNvmx80q+7bp4b7SKWmq7a8Tk2w0AjSKt4PV4m2j2828HPOq2rPvkvs1tfvZKQdIAXtmnmTGf+IPGog2eVYKUlDVqwHfcoC5WQ5wh8gBamdcbdOMq0L0qTnbzG9vtZqw0doNeaUM0+dFXpfEtDhstAq80Zr7RjscLK3T3RxUP4nOeQMA1b1DvJWg+kU32pm20T7AjXZd0va4Ii6SD7bZUUzYv31E9m/T7YGoTtEHRNErprvrCZJJkBxtvdW5mymPsOiUU5kvNhtnR2qZmbJiuZmyG7cJvvZSVE0zDIdpgM94gs+V0qecqPRlcHJtO5vGJW/zkmE4DUwWnlK1Gl/T3ORufFN4T+OS57zN6OclX8K580/OpjIMwzAMwzAMwzDGfAAAdz/tIpTVzwAAAABJRU5ErkJggg==" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img class="image" src="data:image/jpeg;base64,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" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="additional">
+        <p> Alibaba.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt</p>
+        <p>
+            Alibaba Group | Taobao Marketplace | Tmall.com | Juhuasuan | AliExpress | Alibaba.com | 1688.com | Alimama | Fliggy | Tmall Taobao World <br>
+                 Alibaba Cloud | AliOS | AliTelecom | Autonavi | UCWeb | Umeng | Xiami | DingTalk | Alipay | Lazada | Alibaba Security
+        </p>
+        <p>Browse Alphabetically: Onetouch | Showroom | Country Search | Suppliers | Affiliate</p>
+        <p>Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use - User Information Legal Enquiry Guide</p>
+        <p><span>© 1999-2022 Alibaba.com. </span>All rights reserved</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+<script>
+    // slider
+    const sliders = document.querySelectorAll(".slider");
+  // interval between switching images
+  // can't be less than your animation duration in css!
+  const interval = 2800;
+  // if you don't want to first animation last longer than other animations  
+  // set animDuration (in miliseconds) to your value of animation duration in css
+  const animDuration = 600;
+
+  for (let i = 0; i < sliders.length; ++i) {
+    const slider = sliders[i];
+    const dots = slider.querySelector(".dots");
+    const sliderImgs = slider.querySelectorAll(".img");
+
+    let currImg = 0;
+    let prevImg = sliderImgs.length - 1;
+    let intrvl;
+    let timeout;
+
+    // Creates dots and add listeners to them
+    for (let i = 0; i < sliderImgs.length; ++i) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      dots.appendChild(dot);
+      dot.addEventListener("click", dotClick.bind(null, i), false);
+    }
+
+    const allDots = dots.querySelectorAll(".dot");
+    allDots[0].classList.add("active-dot");
+
+    sliderImgs[0].style.left = "0";
+    timeout = setTimeout(() => {
+      animateSlider();
+      sliderImgs[0].style.left = "";
+      intrvl = setInterval(animateSlider, interval);
+    }, interval - animDuration);   
+
+    /**
+     * Animates images
+     * @param {number} [nextImg] - index of next image to show
+     * @param {boolean} [right = false] - animate to right
+     */
+    function animateSlider(nextImg, right) {
+      if (!nextImg)
+        nextImg = currImg + 1 < sliderImgs.length ? currImg + 2 : 1;
+
+      --nextImg;
+      sliderImgs[prevImg].style.animationName = "";
+
+      if (!right) {
+        sliderImgs[nextImg].style.animationName = "leftNext";
+        sliderImgs[currImg].style.animationName = "leftCurr";
+      } 
+      else {
+        sliderImgs[nextImg].style.animationName = "rightNext";
+        sliderImgs[currImg].style.animationName = "rightCurr";
+      }
+
+      prevImg = currImg;
+      currImg = nextImg;
+
+      currDot = allDots[currImg];
+      currDot.classList.add("active-dot");
+      prevDot = allDots[prevImg];
+      prevDot.classList.remove("active-dot");
+    }
+
+    /**
+     * Decides if animate to left or right and highlights clicked dot
+     * @param {number} num - index of clicked dot
+     */
+    function dotClick(num) {
+      if (num == currImg)
+        return false;
+
+      clearTimeout(timeout);
+      clearInterval(intrvl);
+
+      if (num > currImg)
+        animateSlider(num + 1);
+      else
+        animateSlider(num + 1, true);
+
+      intrvl = setInterval(animateSlider, interval);
+    }
+  }
+  document.getElementById("btn-search").addEventListener("click",searchfunc);
+    function searchfunc(){
+        var input = document.getElementById("search").value;
+        localStorage.setItem("search",input);
+        window.location.href= "searchpage.html";
+    }
+    let alibabacart = JSON.parse(localStorage.getItem("alibabacart")) || [];
+    let token = JSON.parse(localStorage.getItem("Authorization"));
+
+
+    function windOpen() {
+        if (token) return;
+        let x = document.getElementById("wind");
+        x.style.display = "block";
+        x.style.cursor = "pointer";
+    }
+    function windClose() {
+        if (token) return;
+        let x = document.getElementById("wind");
+        x.style.cursor = "pointer";
+        x.style.display = "none";
+    }
+
+    if (token) {
+        setTimeout(async () => {
+            let response = await fetch(`https://alibaba-backend.herokuapp.com/users/${token}`);
+            user = await response.json();
+
+            document.querySelector("#navbar-signin-logo").innerHTML = `<p id="hi-user">Hi, ${user.firstName}</p>`;
+            let signout = document.createElement("button");
+            signout.onclick = () => {
+                localStorage.setItem("Authorization", null);
+                window.location.href = "./index.html";
+            }
+            signout.innerText = "Sign out";
+            signout.setAttribute("id", "signoutbtn");
+            document.querySelector("#nav-c").append(signout);
+
+            if (alibabacart.length > 0) {
+                document.querySelector("#cartCount").style.display = "block";
+                document.querySelector("#cartCount").textContent = alibabacart.length;
+            }
+        }, 1000);
+    }
+</script>

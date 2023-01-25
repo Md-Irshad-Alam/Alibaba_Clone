@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        * {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+}
+.additional {
+    text-align: center;
+    color : rgb(113, 113, 113);
+    background-color: transparent;
+}
+
+.additional p {
+    font-size: 15px;
+}
+
+.img-zoom-lens {
+  position: absolute;
+ 
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+#container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#btn-search{
+    cursor: pointer;
+   }
+/* rating */
+
+.rating__icon--star {
+    color: orange;
+  }
+  #rating{
+    display: flex;
+   
+    justify-content: space-around;
+  }
+  #price-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #benefits{
+    display: flex;
+    justify-content: space-around;
+  }
+  #quantity{
+    display: flex;
+    flex-direction: column;
+  }
+  #quantity-controller{
+    display: flex;
+    flex-direction: row;
+  }
+  #plus{
+    background-color: white;
+    cursor: pointer;
+    font-size: large;
+    margin-left: 5px;
+  }
+  #minus{
+    background-color: white;
+    cursor: pointer;
+    font-size: large;
+    margin-right: 5px;
+  }
+  #nos{
+    width: 20px;
+  }
+  #quantityNos{
+    text-align: center;
+  }
+  #total-container{
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 5%);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  #pcs{
+  display: flex;
+  justify-content: space-between;
+  }
+  #shipping{
+   display: flex;
+   justify-content: space-between;
+  }
+  #total{
+display: flex;
+justify-content: space-between;
+  }
+  #text-content{
+    margin-left: 30px;
+    width: 570px;
+    
+  }
+  #quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #rating{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #quantity-text{
+    margin-bottom: 10px;
+  }
+  #btn-container div:nth-child(1){
+    width: 100%;
+    border-style: solid;
+    background: #f60;
+    border-color: #f60;
+    border-radius: 100px;
+    padding: 0 24px;
+    height: 28px;
+    font-size: 14px;
+    border-width: 1px;
+    cursor: pointer;
+  }
+  #btn-container div:nth-child(1) button{
+    background: #f60;
+    border-radius: 100px;
+    padding: 0 24px;
+    height: 28px;
+    font-size: 14px;
+   border: none;
+    color: white;
+    cursor: pointer;
+  }
+  #btn-container div:nth-child(2) button{
+    background-color: white;
+    cursor: pointer;
+  }
+  #btn-container div:nth-child(2){
+    margin-left: 20px;
+    margin-top: 10px;
+    
+  }
+ 
+
+    </style>
+     <link rel="stylesheet" href="./Styles/navbar.css">
+     <script src="https://kit.fontawesome.com/8b305340ae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!-- navbar -->
+     <div id="navbar">
+      <div id="nav-a" style="cursor: pointer;" onclick = "window.location.href = './index.html'">
+          <img src="https://bit.ly/3nBvG0c" alt="" id="img" width="">
+      </div>
+      <div id="nav-b">
+          
+          <div>
+              <input type="search" id="search" placeholder="What are you looking for..">
+          </div>
+          <div>
+              <button id="btn-search">Search</button>
+          </div>
+      </div>
+      <div id="nav-c" onmouseover="windOpen()" onmouseout="windClose()">
+          <p><i class="fa-solid fa-user fa-2x"></i></p>
+          <div id="navbar-signin-logo">
+              <p>Sign in <br> Join for free</p>
+          </div>
+          <div class="flag" id="wind">
+              <p>Welcome back!</p>
+              <button 
+              >Sign In</button>
+              <button >Join for Free</button>
+              <br>
+              <div class="Openedslide">
+                  <div></div>
+                  <div>Continue with:</div>
+                  <div></div>
+              </div>
+              <br>
+              <div class="facebook-icon">
+                  <i class="fab fa-facebook-square fa-2x"></i>&nbsp;
+              <i class="fab fa-google fa-2x"></i>&nbsp;
+              <i class="fab fa-linkedin fa-2x"></i>&nbsp;
+              <i class="fab fa-twitter fa-2x"></i>&nbsp;<br>
+              </div>
+              <h6>By Sliding to Continue with or Create My account , <br> I agree to<a href="index.html">alibaba.com Policy</a> </h6>
+              <h2 style="color: black;">My Alibaba</h2>
+              </div>
+      </div>
+      <div id="nav-d">
+          <i class="fa-solid fa-comment-dots fa-2x"></i>
+          <p>message</p>
+      </div>
+      <div id="nav-e">
+          <i class="fa-solid fa-sack-dollar fa-2x"></i>
+          <p>orders</p>
+      </div>
+      <div id="nav-f" style="cursor:pointer" onclick = "window.location.href = './cart.html'">
+      <p id="cartCount">x</p>
+      <i class="fas fa-shopping-cart fa-2x"></i>
+          <p>cart</p>
+      </div>
+  </div>
+  <div id="bot-nav">
+      <div>
+          <div id="left_first"><i class="fa-solid fa-list"></i>
+              Categories    <i class="fa-solid fa-angle-up"></i>
+              <!-- </div> -->
+              <div id="menu">
+                
+                      <div><a href="#">Machinery / Vehicles & Accessories </a>
+                         
+                      </div>
+                      <div><a href="./electronics.html">Consumer Electronics / Home Appliances </a>
+                         
+                      </div>
+                      <div><a href="#">Apparel / Fashion Accessories /Timepieces,Jewelry</a>
+                         
+                      </div>
+                      <div><a href="#">Lights & Lighting / Construction & Real Estate</a>
+                         
+                      </div>
+                      <div><a href="#">Home & Garden / Furniture</a>
+                         
+                      </div>
+                      <div><a href="#">Fabric & Textiles Raw Material / Home Textiles</a>
+                         
+                      </div>
+                      <div><a href="#">Beauty & Personal Care / Health & Medical</a>
+                          
+                      </div>
+                      <div><a href="#">Packaging & Printing / Office & School Supplies</a>
+                         
+                      </div>
+                      <div><a href="#">Electrical Equipment & Supplies</a>
+                        
+                      </div>
+                      <div><a href="#">Tools & Hardware / Security & Protection / Fabrication Service</a>
+                         
+                      </div>
+              </div>
+          </div>
+          <div>
+              Ready to Ship
+          </div>
+          <div>
+             Protective Essentials
+          </div>
+          <div>
+              Trade Shows
+          </div>
+          <div id="blogslide">
+              Buy Central <i class="fa-solid fa-angle-up"></i>
+             
+          </div>
+          <div>
+              Sell on Alibaba <i class="fa-solid fa-angle-up"></i>
+          </div>
+          <div>
+              Help <i class="fa-solid fa-angle-up"></i>
+          </div>
+      </div>
+      <div>
+          <div>
+              English INR <i class="fa-solid fa-angle-up"></i>
+          </div>
+          <div>
+              Ship to: <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png" width="22px" height="15px"><i class="fa-solid fa-angle-up"></i>
+          </div>
+      </div>
+  </div>
+  <!-- Navbar done -->
+
+
+
+
+
+
+    <div id="container">
+        <div class="img-zoom-container">
+            <img id="myimage" src="" width="300" height="270"   onmouseover="zoomfuncopen()" onmouseout="zoomfuncclose()">
+            <div id="myresult" class="img-zoom-result"></div>
+        </div>
+        
+        <div id="text-content">
+            <div id="title">
+              
+            </div>
+            <div id="rating">
+                <div class="stars">
+                    <i class="fa rating__icon--star fa-star-o star"></i>
+                    <i class="fa rating__icon--star fa-star-o star"></i>
+                    <i class="fa rating__icon--star  fa-star-o star"></i>
+                    <i class="fa rating__icon--star fa-star-o star"></i>
+                    <i class="fa  fa-star-o star"></i>
+                </div>
+                  <div id="text-p">4 star</div>
+                  <div id="reviews">21 reviews</div>
+                  <div id="buyers">84 buyers</div>
+            </div>
+            <div id="price-section">
+                <div id="pcs">Limit :  1-10 pieces</div>
+                <div><p>Price per pc : ₹<span id="amnt">3883</span></p></div>
+            </div>
+            <div id="benefits">
+                <div><p>Benefits :</p></div>
+                <div><p>
+                    Quick refunds on orders under US $500</p></div>
+            </div>
+            <div id="quantity">
+                <div id="quantity-text">
+                    Manage Quantity
+                </div>
+                <div id="quantity-controller">
+                    <div><button id="minus" onclick="minusfunc()">-</button></div>
+                    <div id="Nos"><span id="quantitynos">1</span></div>
+                    <div><button id="plus" onclick="plusfunc()">+</button></div>
+                </div>
+            </div>
+         </div>
+
+         <div id="total-container">
+            <div id="pcs">
+                <p><span id="pcs-pc">1</span> pieces</p>
+                <p>₹<span id="subtotal">3000</span></p>
+            </div>
+            <div id="shipping">
+                <p>Shipping</p>
+                <p>₹9700</p>
+            </div>
+            <div id="total">
+                <p>Total</p>
+                <p>₹<span id="totalamt">12700</span></p>
+            </div>
+           
+            <div id="btn-container">
+                <div><button>Start Order</button></div>
+                <div><button><i class="fa-solid fa-cart-shopping">Add to cart</i></button></div>
+            </div>
+         </div>
+
+    </div>
+<!-- footer started -->
+<hr>
+<div class="additional">
+    <p> Alibaba.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt - Indonesian - עברית</p>
+    <p>
+        Alibaba Group | Taobao Marketplace | Tmall.com | Juhuasuan | AliExpress | Alibaba.com | 1688.com | Alimama | Fliggy | Tmall Taobao World <br>
+             Alibaba Cloud | AliOS | AliTelecom | Autonavi | UCWeb | Umeng | Xiami | DingTalk | Alipay | Lazada | Alibaba Security
+    </p>
+    <p>Browse Alphabetically: Onetouch | Showroom | Country Search | Suppliers | Affiliate</p>
+    <p>Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use - User Information Legal Enquiry Guide</p>
+    <p><span>© 1999-2022 Alibaba.com. </span>All rights reserved</p>
+</div>
+<!-- footer done -->
+
+   
+</body>
+</html>
+<script>
+  document.getElementById("btn-search").addEventListener("click",searchfunc);
+    function searchfunc(){
+        var input = document.getElementById("search").value;
+        localStorage.setItem("search",input);
+        window.location.href= "searchpage.html";
+    }
+    let id = localStorage.getItem("individual");
+    fetch(`https://mock-server-app-rt3e.onrender.com/products?id=${id}`).then(res=>{
+      return res.json();
+    }).then(response=>{
+      displayind(response);
+      
+    });
+    function displayind(data){
+      document.getElementById("myimage").src = data[0].image;
+      document.getElementById("title").innerText= data[0].title;
+      document.getElementById("subtotal").innerText= data[0].price;
+      document.getElementById("amnt").innerText= data[0].price;
+      document.getElementById("totalamt").innerText = Number(data[0].price)+Number(9700);
+      imageZoom("myimage", "myresult");
+    }
+
+
+    function plusfunc(){
+    let curr;
+    curr = document.getElementById("quantitynos").innerText;
+    console.log(curr);
+    curr = Number(curr)+1 ;
+    console.log(curr);
+    document.getElementById("quantitynos").innerText= curr ;
+    document.getElementById("pcs-pc").innerText= curr;
+    let price = document.getElementById("amnt").textContent ;
+    console.log(price);
+    var subtotal = price*curr ;
+    document.getElementById("subtotal").innerText = subtotal;
+    var total = Number(subtotal)+ Number(9700) ;
+    document.getElementById("totalamt").innerText = total;
+}
+function minusfunc(){
+    let curr;
+    curr = document.getElementById("quantitynos").textContent;
+    console.log(curr);
+    if(curr>1){
+        curr = Number(curr)-1 ;
+    console.log(curr);
+    document.getElementById("quantitynos").innerText= curr ;
+    document.getElementById("pcs-pc").innerText= curr;
+    let price = document.getElementById("amnt").textContent ;
+    console.log(price);
+    var subtotal = price*curr ;
+    document.getElementById("subtotal").innerText = subtotal;
+    var total = Number(subtotal)+ Number(9700) ;
+    document.getElementById("totalamt").innerText = total;
+    }
+    
+}
+    function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /* Create lens: */
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /* Insert lens: */
+  img.parentElement.insertBefore(lens, img);
+  /* Calculate the ratio between result DIV and lens: */
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /* Set background properties for the result DIV */
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /* Execute a function when someone moves the cursor over the image, or the lens: */
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /* And also for touch screens: */
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /* Prevent any other actions that may occur when moving over the image */
+    e.preventDefault();
+    /* Get the cursor's x and y positions: */
+    pos = getCursorPos(e);
+    /* Calculate the position of the lens: */
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /* Prevent the lens from being positioned outside the image: */
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /* Set the position of the lens: */
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /* Display what the lens "sees": */
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /* Get the x and y positions of the image: */
+    a = img.getBoundingClientRect();
+    /* Calculate the cursor's x and y coordinates, relative to the image: */
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /* Consider any page scrolling: */
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+imageZoom("myimage", "myresult");
+
+//document.getElementById("minus").addEventListener("click",minusfunc);
+
+
+</script>
