@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <style>
+        #header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-family: Roboto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        margin-bottom: 30px;
+        }
+
+        #header * {
+            font-family: Roboto;
+        }
+
+
+        #header>div {
+            width: 16%;
+            margin-top: 0px;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+        #header img {
+            width: 100%;
+        }
+        #header p {
+            font-size: 22px;
+            font-weight: 400;
+        }
+        #city{
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+        }
+        form{
+            width:500px ;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #f60;
+        }
+        form :hover{
+            position: relative;
+            top: 1px;
+        }
+        #cnt{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        input, select{
+            width: 300px;
+            height: 25px;
+            border: 0.5px solid rgb(105, 103, 103);
+            outline: none;
+            
+        }
+        #itn2{
+            width: 200px;
+        }
+        #itn1{
+            width: 60px;
+            
+        }
+        #city{
+            margin-left:55px
+        }
+        #btn{
+            display: flex;
+            width: 50px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        #btn1{
+            background-color: #f60;
+            border: none;
+            outline: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #btn2{
+            border: none;
+            outline:none ;
+            padding: 5px;
+            border-radius: 5px;
+            background: transparent;
+        }
+        #btn2:hover{
+            background-color: #f60;
+            
+        }
+        /* footer part */
+        #line{
+            margin-top: 20px;
+            width: 100%;
+            height: 1px;
+            background-color: #999;
+            margin-bottom: 15px;
+        }
+        #container{
+           background-color: #f5f5f5;
+           margin-top: 0;
+            padding-bottom: 20px;
+            min-width: 990px;
+            color: #999;
+        }
+        a{
+            color: #999;
+            text-decoration: none;
+        }
+        #row-1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #logo{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <a href="./index.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"
+                    alt=""></a>
+        </div>
+        <p>
+            Address
+        </p>
+    </div>
+
+
+
+    <form>
+        <div id="city">
+            <p>Country</p>
+            <select id="country" >
+              <option value="India">India</option >
+              <option value="Australia">Australia</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="China">China</option>
+              <option value="">Iran</option>
+              <option value="">France</option>
+              <option value="">Vietnam</option>
+              <option value="">Portugal</option>
+              <option value="">Sweden</option>
+            </select>
+        </div>
+        <div id="cnt">
+            <p>Adree Line 1</p>
+            <input type="text" placeholder="Street Addresss, PO box etx" required id="address">
+        </div>
+        
+        <div id="cnt">
+            <p> Address Line 2</p>
+            <input type="text" placeholder="Appartment suite, unit etc (optional)">
+        </div>
+        <div id="cnt">
+            <p> State /Province</p>
+            <input type="text" placeholder="Please select a State/ Province/ Region" required id="state">
+        </div>
+        <div id="cnt">
+            <p>City</p>
+            <input type="text" placeholder="Plese enter a city" id="city" >
+        </div>
+
+         <div id="cnt">
+            <p>Zip Code </p>
+            <input type="text" maxlength="6" placeholder="Please enter a ZIP/Postal Code" required id="zip"> 
+        </div>
+        <div id="cnt">
+            <p> Contact Name</p>
+            <input type="text" placeholder="Please eneter a Contact Name" required id="name">
+        </div>
+        <div id="cnt">
+            <p>Phone Number </p>
+            <input type="text" maxlength="3" placeholder="Country Code" id="itn1">
+            <input type="tel" placeholder="Please enter a Contact Number" id="itn2" id="phone">
+        </div>
+        <div id="btn">
+        <input type="button" value="Submit" id="btn1" onclick="submitbtn()">
+        <input type="button" value="Cancel" id="btn2" onclick="cancelbtn()">
+    </div>
+    </form>
+    <div id="line"></div>
+    <footer>
+        <div id="container">
+            <div id="row-1">
+                <a href="#">AliExpress| </a>
+                <a href="#">1688.com |</a>
+                <a href="#">Tamil Taobao World |</a>
+                <a href="#">Alipay |</a>
+                <a href="#">Lazada</a>
+            </div>
+            <div id="row-1">
+                <p>Browse Alphabetically:</p>
+                <a href="#">Onetouch |</a>
+                <a href="#"> Showroom |</a>
+                <a href="#">Country Search |</a>
+                <a href="#">Suppliers |</a>
+                <a href="#"> Affiliate</a>
+            </div>
+            <div id="row-1">
+                <p>Product Listing Policy -</p>
+                <a href="#">Intellectual Property Protection - </a>
+                <a href="#"> Privacy Policy - </a>
+                <a href="#">Terms of Use - </a>
+                <a href="#">User Information Legal Enquiry Guide</a>
+            </div>
+            <div id="row-1">
+               <img src="https://s.alicdn.com/@img/tfs/TB1VtZtebH1gK0jSZFwXXc7aXXa-65-70.gif" alt="logo" id="logo">
+                <span>© 1999-2021 Alibaba.com. </span>
+                <span> All rights reserved.</span>
+              <img src="https://s.alicdn.com/@img/tfs/TB1QhYprKT2gK0jSZFvXXXnFXXa-20-20.png" alt="logo" id="logo">
+               <span>浙公网安备 33010002000092号 浙B2-20120091-4</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="./address.js"></script>
+</html>

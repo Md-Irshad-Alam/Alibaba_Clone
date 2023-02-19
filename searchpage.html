@@ -99,16 +99,24 @@ color: white;
     <div id="navbar">
         <div id="nav-a" style="cursor: pointer;" onclick = "window.location.href = './index.html'">
             <img src="https://bit.ly/3nBvG0c" alt="" id="img" width="">
+
         </div>
+      
         <div id="nav-b">
-            
-            <div>
-                <input type="search" id="search" placeholder="What are you looking for..">
+                <div>
+                    <input type="search" id="search" placeholder="What are you looking for..">
+                </div>
+                <div>
+                    <button id="btn-search">Search</button>
+                </div>
+
+                <div id="search_containt_show">
+
             </div>
-            <div>
-                <button id="btn-search">Search</button>
-            </div>
+
         </div>
+    
+
         <div id="nav-c" onmouseover="windOpen()" onmouseout="windClose()">
             <p><i class="fa-solid fa-user fa-2x"></i></p>
             <div id="navbar-signin-logo">
@@ -267,6 +275,9 @@ color: white;
         wholedata = response;
         display(response);
     })
+
+
+
     function display(data){
         document.getElementById("container").innerHTML="";
         data.map(function(ele){
@@ -290,6 +301,8 @@ color: white;
             butoon.append(cartbtn);
             description.append(title,price,butoon);
             containeritems.append(image,description);
+    
+
             containeritems.addEventListener("click",function(){
                 localStorage.setItem("individual",ele.id);
                 window.location.href = "./individual-product.html";

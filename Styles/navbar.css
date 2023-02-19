@@ -4,14 +4,13 @@
 body{
     margin: 0;
 }
+
 #navbar {
     display: flex;
     width: 100%;
-    height: 100;
     justify-content: space-evenly;
     margin: 0px;
     box-sizing: border-box;
-    /* position:fixed; */
     padding-right: 10px;
     font-size: 12px;
     background-color: white;
@@ -189,7 +188,6 @@ body{
 }
 #left_first{
     position:relative;
-    
     border-bottom: 1px solid transparent;
     width: 15%;
     text-align: left;

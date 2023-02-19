@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <a href="./index.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"
+                    alt=""></a>
+        </div>
+        <p>
+            Checkout 
+        </p>
+    </div>
+    <div id="trade">
+      <img src="https://s.alicdn.com/@img/tfs/TB1NZfltSrqK1RjSZK9XXXyypXa-20-20.svg
+        " alt=""><h3> Trade Assurance</h3>
+    </div>
+
+    <div id="card-container">
+        <div id="left">
+              
+        <form>
+        <div id="cart_mth">
+            <div id="logo">
+              
+                <h4>Credit/Debit Card</h4>
+                <img src="https://s.alicdn.com/@img/tfs/TB1zt_INSrqK1RjSZK9XXXyypXa-105-40.svg" alt="">
+                <img src="https://s.alicdn.com/@img/tfs/TB1Gv1NToT1gK0jSZFrXXcNCXXa-64-40.svg" alt="">
+                <img src="https://s.alicdn.com/@img/tfs/TB1Tw.ycBr0gK0jSZFnXXbRRXXa-40-40.svg" alt="">
+                <img src="https://s.alicdn.com/@img/imgextra/i1/O1CN01KT262h1WrDz27uBbr_!!6000000002841-2-tps-100-74.png" alt="">
+                <img src="	https://s.alicdn.com/@img/tfs/TB1ZM.ycBr0gK0jSZFnXXbRRXXa-52-40.svg" alt="">
+                <img src="	https://s.alicdn.com/@img/imgextra/i2/O1CN0191d1Q61bwmmn8UbwO_!!6000000003530-55-tps-40-26.svg" alt="">
+
+                <div>
+                    <img src="	https://s.alicdn.com/@img/imgextra/i1/O1CN01XJc0iM1wJ2OwPoM6G_!!6000000006286-55-tps-29-20.svg" alt="">
+                </div>
+        </div>
+         
+                 <span>Supplier should receive the funds in1-2 hours</span>
+                <h4>Card information</h4>
+
+            <input type="number" placeholder="Card number" id="cd-n">
+
+            <div id="name">
+                <input type="text" placeholder="Your name" required>
+                <input type="text" placeholder="Surname" required>
+            </div>
+            <div id="card">
+                <input type="month"  required placeholder="Expiration date">
+                <input type="text" maxlength="4" required placeholder="CVV/CSC">
+            </div>
+            <h4>Billing address</h4>
+            <input type="text" placeholder="Street" required id="strt">
+        
+            <div id="city">
+              <select id="country">
+                <option value="">India</option>
+                <option value="">Australia</option>
+                <option value="">Philippines</option>
+                <option value="">Slovenia</option>
+                <option value="">United Kingdom</option>
+                <option value="">China</option>
+                <option value="">Iran</option>
+                <option value="">France</option>
+                <option value="">Vietnam</option>
+                <option value="">Portugal</option>
+                <option value="">Sweden</option>
+              </select>
+              <input type="text" placeholder="City / Town" required>
+            </div>
+
+            <input type="text" maxlength="6" placeholder="Zip Code" id="zp">
+
+            <div id="warn">
+                <p>Card information is guaranteed to be safe on the world-leading payment security PCI DSS standard.</p>
+                <img src="	https://s.alicdn.com/@img/tfs/TB1qcTYNMHqK1RjSZJnXXbNLpXa-129-40.svg" alt="">
+            </div>
+            <div id="poly">
+           <span> Set as your default card payment method and accept the <a href="#">Alibaba.com Privacy Policy</a> </span>
+        </div>
+    </div>
+            <div id="paypal">
+                <div>
+                    <input type="checkbox">
+                    <h4>PayPal</h4>
+                    <p>Save up to US $30 off with PayPal </p> 
+                    <img src="https://s.alicdn.com/@img/tfs/TB1CmjsgHY1gK0jSZTEXXXDQVXa-163-40.svg" alt="">
+                </div>
+            <p id="spec"> Supplier should receive the funds in1-2 hours</p>
+        </div>
+        <div id="paypal">
+            <div>
+                <input type="checkbox">
+                <h4>Apple Pay</h4>
+                
+                <img src="	https://s.alicdn.com/@img/imgextra/i1/O1CN01VsR8ol28JkPTZpbR8_!!6000000007912-55-tps-48-20.svg" alt="">
+            </div>
+        <p id="spec"> You need a compatible Apple device to complete the payment.</p>
+    </div>
+    <div id="paypal">
+        <div>
+            <input type="checkbox">
+           <h3>Wire Transfer </h3> 
+            <img src="https://s.alicdn.com/@img/tfs/TB14Xb6NNYaK1RjSZFnXXa80pXa-67-40.svg" alt="">
+        </div>
+        <p id="spec"> Transfer payment through Alibaba.com to the supplier, secured by Trade Assurance.</p>
+    
+    </div>
+        </form>
+
+    </div>
+    <div id="place-order">
+            <div id="order_t">
+                <p>Items(s) total</p>
+                <p id="cart_total"></p>
+                
+        </div>
+        <div id="order_t">
+            <p>Shipping fee</p>
+            <p id="items_total"></p> 
+        </div>
+       
+        <div id="line_cart"></div>
+       <div id="order_t">
+            <p>Order total</p>
+            <p id="order_T"></p>
+       </div>
+       <div id="order_t">
+        <p>Transaction Fee</p>
+        <p id="tr"></p>
+       </div>
+        <div id="line_cart"></div>
+        <div id="order_t">
+            <p>Payment</p>
+            <p id="pay"></p>
+        </div>
+        
+        <button id="place-btn">Place Order</button>
+
+    </div> 
+</div>
+<div id="line"></div>
+<footer>
+    <div id="container">
+        <div id="row-1">
+            <a href="#">AliExpress| </a>
+            <a href="#">1688.com |</a>
+            <a href="#">Tamil Taobao World |</a>
+            <a href="#">Alipay |</a>
+            <a href="#">Lazada</a>
+        </div>
+        <div id="row-1">
+            <p>Browse Alphabetically:</p>
+            <a href="#">Onetouch |</a>
+            <a href="#"> Showroom |</a>
+            <a href="#">Country Search |</a>
+            <a href="#">Suppliers |</a>
+            <a href="#"> Affiliate</a>
+        </div>
+        <div id="row-1">
+            <p>Product Listing Policy -</p>
+            <a href="#">Intellectual Property Protection - </a>
+            <a href="#"> Privacy Policy - </a>
+            <a href="#">Terms of Use - </a>
+            <a href="#">User Information Legal Enquiry Guide</a>
+        </div>
+        <div id="row-1">
+           <img src="https://s.alicdn.com/@img/tfs/TB1VtZtebH1gK0jSZFwXXc7aXXa-65-70.gif" alt="logo" id="logo">
+            <span>© 1999-2021 Alibaba.com. </span>
+            <span> All rights reserved.</span>
+          <img src="https://s.alicdn.com/@img/tfs/TB1QhYprKT2gK0jSZFvXXXnFXXa-20-20.png" alt="logo" id="logo">
+           <span>浙公网安备 33010002000092号 浙B2-20120091-4</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="./payment.js"></script>
+</html>
